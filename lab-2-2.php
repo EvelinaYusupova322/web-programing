@@ -12,4 +12,8 @@ for ($i=0;$i<$per;$i++)
 echo '<br><br>'."Отсортированный массив: ";
 sort($array);
 print_r($array);
+
+echo '<br><br>'."Перевернутый массив: ";
+$rez = array_reverse($array);
+print_r($rez);
 ?>
