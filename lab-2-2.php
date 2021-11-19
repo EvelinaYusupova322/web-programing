@@ -35,4 +35,8 @@ print_r($sred);
 //"Число 50: 
 if (in_array(50, $rez)) {
     echo '<br><br>'."Есть число 50";
+    
+echo '<br><br>'."Массив из уникальных значений: ";
+$unik=array_unique($rez);
+print_r($unik);
 ?>
