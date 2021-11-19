@@ -32,4 +32,9 @@ echo '<br>';
  echo'Массив с удаленным первым элементом ';
 array_shift($rez);
 print_r($rez);
+
+echo '<br>';
+ echo'Массив с удаленными повторяющимися элементами: ';
+ $rez1 = array_unique($rez);
+print_r($rez1);
 ?>
