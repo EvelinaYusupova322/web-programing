@@ -27,4 +27,9 @@ echo '<br>';
  while (list($key, $val) = each($rez)) {
  echo "rez  [" . $key . "] = " . $val . "\n";
 }
+
+echo '<br>';
+ echo'Массив с удаленным первым элементом ';
+array_shift($rez);
+print_r($rez);
 ?>
