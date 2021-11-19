@@ -20,4 +20,12 @@ print_r($rez);
 echo '<br><br>'."Массив без последнего элемента: ";
 array_pop($rez);
 print_r($rez);
+
+echo '<br><br>'."Сумма элементов массива: ";
+$sum = array_sum($rez);
+print_r($sum);
+ 
+echo '<br><br>'."Количество элементов в массиве: ";
+$count = count($rez);
+print_r($count);
 ?>
