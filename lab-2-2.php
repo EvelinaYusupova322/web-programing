@@ -8,3 +8,8 @@ for ($i=0;$i<$per;$i++)
     $array[$i]=rand(10,99);
     echo $array[$i].'&nbsp;&nbsp;';
 }
+
+echo '<br><br>'."Отсортированный массив: ";
+sort($array);
+print_r($array);
+?>
