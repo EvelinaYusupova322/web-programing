@@ -16,4 +16,8 @@ print_r($array);
 echo '<br><br>'."Перевернутый массив: ";
 $rez = array_reverse($array);
 print_r($rez);
+
+echo '<br><br>'."Массив без последнего элемента: ";
+array_pop($rez);
+print_r($rez);
 ?>
