@@ -28,4 +28,11 @@ print_r($sum);
 echo '<br><br>'."Количество элементов в массиве: ";
 $count = count($rez);
 print_r($count);
+
+echo '<br><br>'."Среднее арифметическое: ";
+$sred=$sum/$count;
+print_r($sred);
+//"Число 50: 
+if (in_array(50, $rez)) {
+    echo '<br><br>'."Есть число 50";
 ?>
