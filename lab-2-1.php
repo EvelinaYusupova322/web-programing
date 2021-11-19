@@ -7,14 +7,24 @@ foreach($treug as $k=>$n) {
     $treug[$k]=$n*($n+1)/2;
     echo $treug[$k] .'&nbsp;&nbsp;';
    }
+
 echo '<br>';
  echo'Массив квадратов натуральных чисел: ';
  foreach($kvd as $a=>$b) {
     $kvd[$a]=$b*$b;
     echo $kvd[$a].'&nbsp;';
     }
+
 echo '<br>';
  echo'Объединенный массив: ';
  $rez=array_merge($treug,$kvd);
  print_r($rez);
+
+echo '<br>';
+ echo'Отсортированный массив';
+ sort($rez);
+ reset($rez);
+ while (list($key, $val) = each($rez)) {
+ echo "rez  [" . $key . "] = " . $val . "\n";
+}
 ?>
