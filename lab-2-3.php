@@ -11,4 +11,8 @@ echo  $k, ' => ', $v;
 echo '<br><br>' . 'Сортировка массива по значениям: ';
 asort($cust);
 print_r($cust);
+
+echo '<br><br>' . 'Сортировка массива по ключам: ';
+ksort($cust);
+print_r($cust);
 ?>
