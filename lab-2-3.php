@@ -7,4 +7,8 @@ echo '<br><br>' . 'Добавлен ключ rating со значением 100 
 $cust["rating"] = 100;
 foreach($cust as $k => $v)
 echo  $k, ' => ', $v;
+
+echo '<br><br>' . 'Сортировка массива по значениям: ';
+asort($cust);
+print_r($cust);
 ?>
