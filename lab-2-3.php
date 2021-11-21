@@ -15,4 +15,8 @@ print_r($cust);
 echo '<br><br>' . 'Сортировка массива по ключам: ';
 ksort($cust);
 print_r($cust);
+
+echo '<br><br>' . 'Отсортированный массив: ';
+sort($cust);
+print_r($cust);
 ?>
