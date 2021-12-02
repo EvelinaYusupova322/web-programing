@@ -14,23 +14,20 @@ b: <INPUT type="text" name="b" size="3">
  <P> <INPUT type="submit" name="obr" value="Посчитать!">
 </FORM>
 <?
+$s2="Результат: ";
 switch ($_POST["font"]) {
   case summation:
   $s1=$_POST["a"]+$_POST["b"];
-  echo $s1;
   break;
   case substraction:
   $s1=$_POST["a"]-$_POST["b"];
-  echo $s1;
   break;
   case division:
   $s1=$_POST["a"]/$_POST["b"];
-  echo $s1;
   break;
   case miltiply:
   $s1=$_POST["a"]*$_POST["b"];
-  echo $s1;
   break;
 }
-
+echo $s2 . $s1;
 ?>
