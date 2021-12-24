@@ -1,9 +1,11 @@
 <html><body>
 <?php
-$mysqli = new mysqli("localhost", "a0611486_root", "root", "a0611486_os");
-if ($mysqli->connect_errno){
-    echo"Невозможно подключиться к серверу";} // установление соединения с сервером
-
+include("checks.php");
+require_once 'connect.php';
+$mysqli = new mysqli($host, $user, $password, $database);
+if ($mysqli->connect_errno) {
+    echo "Невозможно подключиться к серверу";
+}
 $id_os=$_GET['id_os'];
     
 $os_name=$_GET['os_name'] ;   
@@ -18,8 +20,16 @@ WHERE id_os='$id_os'";
 
 $result = $mysqli->query ($zapros);
 
-if ($result) 
-{echo 'Все сохранено. <a href="index.php"> Вернуться к списку OC</a>'; }
-else { echo 'Ошибка сохранения. <a href="index.php">Вернуться к списку OC</a> '; }
+if ($result) {
+    if ($_SESSION['type'] == 1)
+        echo "Все сохранено.<a href=os.php> Вернуться к списку ОС </a>";
+    elseif ($_SESSION['type'] == 2)
+        echo "Все сохранено.<a href=osAdm.php> Вернуться к списку ОС </a>";
+} else {
+    if ($_SESSION['type'] == 1)
+        echo "Ошибка сохранения.<a href=os.php> Вернуться к списку ОС </a>";
+    elseif ($_SESSION['type'] == 2)
+        echo "Ошибка сохранения.<a href=osAdm.php> Вернуться к списку ОС </a>";
+}
 ?>
 </body></html>
